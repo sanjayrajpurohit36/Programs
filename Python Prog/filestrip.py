@@ -1,0 +1,5 @@
+file_object=open("name.txt","r")
+r=file_object.read()
+name=r.strip()
+print(name)
+file_object.close()
