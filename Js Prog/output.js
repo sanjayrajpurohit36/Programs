@@ -15,12 +15,13 @@ console.log(3);
 
 // function declaration or function statement
 function abc() {
-  console.log("Hi I'am Troy!!");
+  console.log("Function abc called");
 }
 abc();
 // function expression
 // when ever a function is assigned to a variable
 let x = function () {
+  // function acts like a value.
   console.log("inside function x");
 };
 x();
