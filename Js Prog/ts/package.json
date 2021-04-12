@@ -1,0 +1,14 @@
+{
+  "name": "ts",
+  "version": "1.0.0",
+  "description": "Learning ts",
+  "main": "first.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sanjay Rajpurohit",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  }
+}
