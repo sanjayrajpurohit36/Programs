@@ -1,4 +1,4 @@
-console.log(y);
+console.log(y); // will throw can error of reference undefined in browser & used before initialization in node
 let y = 10;
 (() => {
   const x = 20;
