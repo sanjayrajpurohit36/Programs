@@ -1,0 +1,36 @@
+<!-- This code is to check css knowledge, how css will be applied to elements -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="" />
+    <style type="text/css" media="screen">
+      body {
+        font-size: 10px;
+      }
+
+      .news {
+        font-size: 12px;
+      }
+
+      .news h1 + p {
+        font-style: italic;
+        font-size: 14px;
+      }
+
+      .news .abstract {
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="news">
+      <h1 class="headline">This just in!</h1>
+      <p class="abstract">Abstract</p>
+      <p>Paragraph 1</p>
+    </article>
+  </body>
+</html>
