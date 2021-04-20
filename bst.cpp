@@ -1,3 +1,10 @@
+/*                  5
+                    
+               /          \
+             4             8
+            /            /    \   
+          3             6      9  BST
+*/
 #include <stdio.h>
 #include <iostream>
 #include <stdlib.h>
@@ -12,8 +19,8 @@ struct Node
 
 void createNode(int element)
 {
-    int n;            // for data
-    struct Node *itr; // iterator for looping the trees
+    int n;                     // for data
+    struct Node *itr, *parent; // iterator for looping the trees
     Node *temp = (struct Node *)(calloc(sizeof(struct Node), 1));
     temp->data = element;
     temp->left = NULL;
@@ -27,32 +34,63 @@ void createNode(int element)
         itr = start;
         while (itr != NULL)
         {
-            if (itr->data > temp->data)
+            parent = itr;
+            if (itr->data >= temp->data)
             {
                 itr = itr->left;
             }
-            else if (itr->data < temp->data)
-            {
+            else
                 itr = itr->right;
-            }
         }
-        itr = temp;
+        if (parent->data >= temp->data)
+        {
+            parent->left = temp;
+        }
+        else
+            parent->right = temp;
     }
 }
 
-void BSTdisplayLRN(Node *temp)
+void BSTInorder(Node *temp) // Inorder Left Node Right
 {
     struct Node *itr = temp;
+    if (temp == NULL)
+    {
+        return;
+    }
+
+    BSTInorder(itr->left);
+    cout << itr->data << "->";
+    BSTInorder(itr->right);
+}
+
+void BSTPreorder(Node *temp) // Node Left Right
+{
+    Node *itr = temp;
     if (itr == NULL)
     {
-        cout << "Tree is empty";
         return;
     }
     else
     {
-        BSTdisplayLRN(itr->left);
-        BSTdisplayLRN(itr->right);
-        cout << temp->data;
+        cout << itr->data << "->";
+        BSTPreorder(itr->left);
+        BSTPreorder(itr->right);
+    }
+}
+
+void BSTPostorder(Node *temp) // Post order
+{
+    struct Node *itr = temp;
+    if (itr == NULL)
+    {
+        return;
+    }
+    else
+    {
+        BSTPostorder(itr->left);
+        BSTPostorder(itr->right);
+        cout << itr->data << "->";
     }
 }
 
@@ -63,6 +101,36 @@ int main()
     {
         createNode(arr[i]);
     }
-    BSTdisplayLRN(start);
+    char choice;
+    while (1)
+    {
+        cout << "\n";
+        cout << "1.InOrder" << endl;
+        cout << "2.PreOrder" << endl;
+        cout << "3.PostOrder" << endl;
+        cout << "0. Exit" << endl;
+        cout << "Enter your choice:" << endl;
+        cin >> choice;
+        switch (choice)
+        {
+        case '1':
+            BSTInorder(start);
+            break;
+        case '2':
+            BSTPreorder(start);
+            break;
+        case '3':
+            BSTPostorder(start);
+            ;
+            break;
+        case '0':
+            exit(0);
+            break;
+        default:
+            cout << "Bad Choice";
+        }
+    }
+    cout
+        << "\n";
     return 0;
 }
