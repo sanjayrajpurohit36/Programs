@@ -30,6 +30,10 @@
 // };
 // let callFunc = obj.newBind(obj);
 
+const obj = { name: "sanjay" };
+obj.name = "rahul";
+console.log("==>", obj);
+
 // done tested
 // var check = 10;
 // (() => {
