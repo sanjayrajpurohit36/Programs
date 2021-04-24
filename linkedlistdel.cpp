@@ -112,33 +112,22 @@ void delNodeFromPos(int pos)
     else
     {
         if (pos == 1)
-        {
             delNodeFromStart();
-        }
         else
         {
-            int counter = 0, flag = -1;
             itr = start;
-            while (itr->next != NULL)
-            {
+            for (int i = 0; i < pos && itr != NULL; i++)
                 itr = itr->next;
-                counter++;
-                if (counter == pos - 2)
-                {
-                    flag = 1;
-                    break;
-                }
-            }
-            if (flag)
-            {
 
+            if (itr->next == NULL)
+                delNodeFromLast();
+            else
+            {
                 toBeDeletedNode = itr->next;
                 itr->next = itr->next->next;
-                cout << "data of node to be deleted: " << toBeDeletedNode->data;
-                free(toBeDeletedNode);
+                cout << "Node data which is going to be deleted" << toBeDeletedNode->data;
+                free(itr);
             }
-            else
-                cout << "Entered pos out of bound";
         }
     }
 }
