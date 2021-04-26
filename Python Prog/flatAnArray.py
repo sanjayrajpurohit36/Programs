@@ -4,7 +4,8 @@ def flat(arr):
         if(type(i) == int):
             flattenedAry.append(i)
         else:
-            flattenedAry.append(i[0:len(i)])
+            for element in i:
+                flattenedAry.append(element)
     return flattenedAry
 
 
