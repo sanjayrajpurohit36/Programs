@@ -1,0 +1,15 @@
+{
+  "name": "servefile",
+  "version": "1.0.0",
+  "description": "This project is for learning purpose and will be used to serve a html file.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Snajay Rajpurohit",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
