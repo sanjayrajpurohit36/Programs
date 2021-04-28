@@ -1,0 +1,13 @@
+.parent {
+  display: flex;
+}
+.child {
+  width: calc(33.33% - 10px);
+  height: 1rem;
+  margin-right: 10px;
+  background-color: red;
+}
+.child:last-child {
+  margin: 0;
+  background-color: black;
+}
