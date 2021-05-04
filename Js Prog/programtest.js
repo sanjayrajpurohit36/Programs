@@ -68,8 +68,8 @@
 //   var a = (b = 19);
 // })();
 
-// // a here is not defined
-// // b here is 19
+// a here is not defined
+// b here is 19
 // console.log(typeof a !== "undefined"); //false
 // console.log(typeof b !== "undefined"); // true
 // console.log(typeof "jeet" + "<br>"); // string+<br>
