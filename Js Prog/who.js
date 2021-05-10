@@ -1,9 +1,9 @@
 function whoIsTatti(name) {
-  let virat = "tatti";
+  let virat = "fool";
 
-  if (virat === "tatti") {
+  if (virat === "fool") {
     function whoIsRealTatti(name) {
-      return console.log(`${name} is tatti`);
+      return console.log(`${name} is fool`);
     }
     return whoIsRealTatti;
   }
