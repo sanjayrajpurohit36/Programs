@@ -1,4 +1,5 @@
 /**
+ * This is a very important concept.
  * Function test shows that a is not defined and b is defined outside the function because
  * var a = (b = 3); is interpreted
  * b = 3
