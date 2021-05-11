@@ -47,14 +47,17 @@ void PreOrder(Node *temp) // Node left right
     if (temp == NULL)
         return;
     if (temp->right == NULL && temp->left == NULL)
+    {
         cout << temp->data << " -> ";
+        return;
+    }
     PreOrder(temp->left);
     PreOrder(temp->right);
 }
 
 int main()
 {
-    int arr[] = {0, 1, 2, 4, 5, 7, 9};
+    int arr[5] = {5, 2, 4, 3, 9};
     for (int i = 0; i < sizeof(arr) / sizeof(int); i++)
     {
         createNode(arr[i]);
