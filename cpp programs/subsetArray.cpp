@@ -1,4 +1,10 @@
-// Program to check whether an array B is subset of array A or not.
+/**
+ * Problem:- Program to check whether an array B is subset of array A or not.
+ * Solution: Create an unordred_map of ary1 and set its values as 1 or we can also create
+ * frequency map for ary 1 not loop through the second array so if any element comes which
+ * is not present in the unordered_map of arr1 then that second array is not the subse of the first array.
+ * 
+ **/
 #include <iostream>
 #include <stdio.h>
 #include <unordered_map>
