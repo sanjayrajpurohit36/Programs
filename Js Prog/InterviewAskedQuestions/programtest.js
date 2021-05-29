@@ -22,31 +22,24 @@
  *  @function getPairs(arr, sum)
  *  @return array of pairs having sum equal to given value
  */
-// const arr = [-1, 0, 1, 2, 3, 5, 5, 6, 7, 10, 11];
+var arr = [-1, 0, 1, 2, 3, 5, 5, 6, 7, 10, 11];
 
-// const getPairs = (arr, sum = 10) => {
-//   let aryMap = {};
-//   arr.forEach((i) => {
-//     aryMap[i] = true;
-//   });
+const getPairs = (arr, sum = 10) => {
+  //you need to write code here with one thing in mind that the complexity should be O(n)
+  let diffMap = {};
+  let Pairs = [];
+  let pairsIndex = [];
 
-//   //you need to write code here with one thing in mind that the complexity should be O(n)
-//   let sumMap = {};
-//   arr.forEach((element) => {
-//     sumMap[element] = sum - element;
-//   });
-//   let Pairs = [];
+  arr.map((value, key) => {
+    if (diffMap[sum - value] != undefined) {
+      Pairs.push([arr[key], arr[diffMap[sum - value]]]); // Pairs array will contain the pairs
+      pairsIndex.push([key, diffMap[sum - value]]); // pairsIndex wil contain the indexes of pairs
+    } else diffMap[value] = key;
+  });
+  return { Pairs, pairsIndex };
+};
 
-//   arr.forEach((i) => {
-//     if (aryMap[sum - i]) {
-//       aryMap[i] = false;
-//       Pairs.push([i, sum - i]);
-//     }
-//   });
-//   return Pairs;
-// };
-
-// console.log("Pairs=> ", getPairs(arr));
+console.log("Pairs=> ", getPairs(arr));
 
 // closure
 // function outer() {
