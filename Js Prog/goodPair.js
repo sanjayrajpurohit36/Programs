@@ -7,13 +7,12 @@ function goodPairs(arr) {
   pairCounter = 0;
   mp = {};
   arr.forEach((i) => {
-    console.log(mp, i);
+    // console.log(mp, i);
     if (mp[i]) {
       pairCounter += mp[i]["size"];
       mp[i]["hw"].push(i);
       mp[i]["size"] += 1;
     } else {
-      console.log(i);
       mp[i] = { hw: [i], size: 1 };
     }
   });
@@ -21,4 +20,6 @@ function goodPairs(arr) {
   console.log(pairCounter);
 }
 
-goodPairs([1, 2, 2, 3, 5, 2, 1, 1, 1]);
+goodPairs([1, 1, 1, 1]); // 6
+goodPairs([1, 2, 3, 1, 1, 3]); // 4
+goodPairs([1, 2, 3]); // 0
