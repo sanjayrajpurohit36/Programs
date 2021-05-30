@@ -7,4 +7,4 @@ class Solution:
 
 
 ObjS = Solution()
-ObjS.twoSum([1,2,3,4,5],3) 1800 896 9999
+ObjS.twoSum([1, 2, 3, 4, 5], 3)
