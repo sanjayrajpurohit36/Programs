@@ -11,26 +11,12 @@ int main()
     map<int, int> valueDifferenceMap;
     map<int, int>::iterator mapIterator;
     int pairCounter = 0;
-    // unordered_map<int, int> map;
-    // unordered_map<int, int>::iterator mapIterator;
-    // for (int i = 0; i < size; i++)
-    // {
-    //     int diff = K - arr[i];
-    //     map[diff] = arr[i];
-    // }
-    // for (int j = 0; j < size; j++)
-    // {
-    //     if (map.find(arr[j]) != map.end())
-    //         pairCounter++;
-    // }
-
     for (int i = 0; i < size; i++)
     {
         int diff = 0;
         diff = K - arr[i];
         cout << arr[i] << " : =>"
              << "difference " << diff << endl;
-        ;
         if (valueDifferenceMap.find(diff)->second)
             valueDifferenceMap.insert(pair<int, int>(diff, arr[i]));
     }

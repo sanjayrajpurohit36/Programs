@@ -42,7 +42,6 @@ public:
 int main()
 {
     Solution obj;
-
     int ans = obj.isPerfectSquare(81);
     cout << "ans: " << ans;
 
