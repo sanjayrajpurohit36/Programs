@@ -5,8 +5,8 @@ using namespace std;
 class Solution
 {
 public:
-    int i, j;  // defined pubic class members
-    Solution() // default constructor for initiaizing the class members
+    int i, j;  // defined public class members
+    Solution() // default constructor for initiaizing the class member function
     {
         i = 0;
         j = 0;
