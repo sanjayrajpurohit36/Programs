@@ -1,3 +1,7 @@
+/**
+ *  WAP to find the common elements in 3 arrays
+ * */
+
 #include <iostream>
 #include <stdio.h>
 #include <vector>
