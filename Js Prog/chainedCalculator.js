@@ -1,33 +1,32 @@
 // chained calculator
 
-function calc(initialValue) {
+function calc(initialValue = 2) {
   // accumulator
   var result = initialValue;
+  var combiner = {
+    add: (value) => add(value),
+    subt: (value) => subt(value),
+    res: () => res(),
+  };
 
-  function add(a) {
+  const add = (a) => {
     console.log("coming in add ", result, a);
     result += a;
-    return reply();
-  }
+    return combiner;
+  };
+  const res = () => {
+    return result;
+  };
 
-  function subt(s) {
+  console.log(combiner.add(2).res());
+
+  const subt = (s) => {
     console.log("coming in subt ", result, s);
     result -= s;
-    return reply();
-  }
+    return combiner;
+  };
 
-  function res() {
-    return result;
-  }
-
-  function reply() {
-    return {
-      add: (value) => add(value),
-      subt: (value) => subt(value),
-      res: () => res(),
-    };
-  }
-  return reply();
+  // return combiner;
 }
 
-console.log(calc(2).add(2).subt(2).res());
+console.log(calc());
