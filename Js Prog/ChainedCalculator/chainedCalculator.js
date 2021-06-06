@@ -1,4 +1,4 @@
-// chained calculator
+// chained calculator approach 2
 
 function calc(initialValue = 2) {
   // accumulator
@@ -10,23 +10,21 @@ function calc(initialValue = 2) {
   };
 
   const add = (a) => {
-    console.log("coming in add ", result, a);
+    //Note:- here we can create normal functions as well
     result += a;
     return combiner;
   };
-  const res = () => {
-    return result;
-  };
-
-  console.log(combiner.add(2).res());
 
   const subt = (s) => {
-    console.log("coming in subt ", result, s);
     result -= s;
     return combiner;
   };
 
-  // return combiner;
+  const res = () => {
+    return result;
+  };
+
+  return combiner;
 }
 
 console.log(calc());
