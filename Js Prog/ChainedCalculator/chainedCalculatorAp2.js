@@ -2,6 +2,7 @@
  * In this approach we will use an object inside the calc function i.e "combiner".
  * We will return upon calling calc and every function inside it
  * so that we can do a chaining on it for calling the other functions
+
  */
 function calc(initialValue = 2) {
   // accumulator
