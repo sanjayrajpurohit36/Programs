@@ -1,4 +1,4 @@
-/*  chained calculator approach 2 
+/***   Chained Calculator Approach 1  ***
     In this approach we will use the this object & will add all the functions to that object
     the drawback of this approach is only that we're pollutint the global this object of the JS.
 */
