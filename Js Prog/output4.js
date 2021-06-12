@@ -35,3 +35,31 @@ console.log(x);
 // 100
 // 10
 // 10
+
+// Frequently asked JS Questions
+
+var name = "abc";
+(function changeName() {
+  console.log(name);
+  var name = "xyz";
+  console.log(name);
+})();
+console.log(name);
+
+// Output
+// undefined
+// xyz
+// abc
+
+var name = "abc";
+(function changeName() {
+  console.log(name);
+  name = "xyz";
+  console.log(name);
+})();
+console.log(name);
+
+//Output
+//abc
+//xyz
+//xyz
