@@ -17,3 +17,21 @@ console.log(x); // 100
   console.log(x);
 })();
 console.log(x);
+
+// Output:
+// 100
+// 10
+// 100
+
+var x = 100;
+console.log(x); // 100
+(function () {
+  x = 10;
+  console.log(x);
+})();
+console.log(x);
+
+// Output:
+// 100
+// 10
+// 10
