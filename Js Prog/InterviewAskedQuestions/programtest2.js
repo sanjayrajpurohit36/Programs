@@ -1,4 +1,4 @@
-/*                     No broker Interview Round 2                  */
+/*                     NoBroker Interview                   */
 // Note: uncomment the code and check the output
 
 /**

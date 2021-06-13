@@ -1,4 +1,4 @@
-// These programs were asked to me in interview at Nobroker
+/*  Company :NoBroker */
 
 /**
  *  Objective: create a function to remove duplicates from an array
