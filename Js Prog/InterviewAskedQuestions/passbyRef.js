@@ -14,5 +14,22 @@ let obj2 = obj; // here obj is being assigned to obj2 by reference means whateve
 obj2.name = "Tom";
 
 console.log(obj);
-
 // Output: { name: Tom, gender: M}
+
+/************************************************/
+let obj3 = Object.assign(obj, {});
+obj3.name = "Max";
+
+console.log(obj);
+// Output: { name: Max, gender: M}
+
+/************************************************/
+let obj4 = JSON.stringify(obj);
+
+obj4 = JSON.parse(obj4);
+
+obj4.name = "Zen";
+
+console.log("obj4", obj);
+// Output : { name: Max, gender: M}
+// In this case only the parent object will not get changed.
