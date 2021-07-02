@@ -1,13 +1,13 @@
-function whoIsTatti(name) {
+function whoIsGenius(name) {
   let virat = "fool";
 
   if (virat === "fool") {
-    function whoIsRealTatti(name) {
+    function whoIsRealGenius(name) {
       return console.log(`${name} is fool`);
     }
-    return whoIsRealTatti;
+    return whoIsRealGenius;
   }
 }
 
-let tattiFunctionCall = whoIsTatti("virat");
-tattiFunctionCall("xyz");
+let GeniusFunctionCall = whoIsGenius("You");
+GeniusFunctionCall("xyz");
