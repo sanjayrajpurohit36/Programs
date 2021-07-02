@@ -1,0 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.boxWrapper {
+  display: flex;
+  height: 10rem;
+  width: 100%;
+  background-color: red;
+}
+.boxWrapper > div {
+  height: 2rem;
+  width: 6rem;
+  padding: 1rem;
+  background: yellow;
+}
+
+.boxWrapper > :not(:last-child) {
+  border-bottom: 2px solid blue;
+}
