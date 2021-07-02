@@ -33,8 +33,4 @@ console.log("fetching names complete");
  callstack/execution thread will get blocked in executing infinite while loop 
  so the execution pointer will never reach inside the .then block of promise
  at line no 18.
-
-  
-  
-  
  */

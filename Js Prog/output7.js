@@ -2,7 +2,6 @@
 // Question: How long do you think the console.log(a++) will print the incremented value.
 
 let a = true;
-let counter = 0;
 
 setTimeout(() => {
   a = false;
