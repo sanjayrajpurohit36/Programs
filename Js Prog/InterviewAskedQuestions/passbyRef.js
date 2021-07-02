@@ -17,11 +17,13 @@ console.log(obj);
 // Output: { name: Tom, gender: M}
 
 /************************************************/
-let obj3 = Object.assign(obj, {});
+let obj3 = Object.assign({}, obj);
 obj3.name = "Max";
 
-console.log(obj);
-// Output: { name: Max, gender: M}
+console.log("obj3", obj, obj3);
+/* Output: for obj{ name: Tom, gender: M}
+    for obj3 {name: Max, gender: M}
+*/
 
 /************************************************/
 let obj4 = JSON.stringify(obj);
@@ -32,4 +34,3 @@ obj4.name = "Zen";
 
 console.log("obj4", obj);
 // Output : { name: Max, gender: M}
-// In this case only the parent object will not get changed.
