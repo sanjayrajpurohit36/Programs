@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .container {
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        border: 10px solid;
+        margin: 10px;
+        background: red;
+      }
+      .box {
+        box-sizing: border-box;
+      }
+      .outline {
+        outline: 10px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        Width of the default container ?
+    </div>
+    <div class="container box">
+        Width of the container box with box-sizing: border-box ?
+    </div>
+    <div class="container outline">
+        Width of the container with outline
+    </div>
+    </body>
+  </body>
+</html>
+
+
+
+
+<!-- 
+    Answer: 
+    For container div
+    Without border box, padding and broder gets aded to width. so width = 140px
+
+    For container box div
+    with border box, padding & border are adjusted withing the width. so width = 100px
+
+    For container outline div
+    Outline and Margin dosent affect the width / height of the container with / without border box
+    Outline generally overlaps the other content.
+
+
+ -->
