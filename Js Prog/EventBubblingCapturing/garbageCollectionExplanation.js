@@ -1,6 +1,22 @@
 /*
+
+     A memory leak occurs when you don't need an object, 
+     but the runtime thinks you do and you're unintentionally using memory
+
     All the variable memory allocations which are not being used in the program which are garbage collected.
     Reference Counts helps indicate when memory is unused then garbage collector collects all that memory.
+    
+    Algo used: Mark & Sweep
+
+    Consequences of Memory Leak:
+    A pretty common symptom of a memory leak is that a page's performance gets progressively worse over time.
+    Common Causes of Memory Leak:
+        Accidental Global Variables
+        Forgotten Timers
+        Closures
+        Detached DOM trees
+        Retaining tree
+
 */
 const someConst = 10;
 
