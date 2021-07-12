@@ -1,4 +1,5 @@
 /*
+    1. First cause of Memory Leak
     Scope lookup happens when we create global variables means we reserve memory in 
     global space / global object / window object that memory is not garbage collected by the garbage collector.
 */
