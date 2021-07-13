@@ -1,0 +1,34 @@
+<!-- 
+  Event Bubbling:- 
+  Event bubbling means that the events will have a tendency of bubble out so in this html structure if we click
+  child, then the event will bubble out to parent div then from parent div it will bubble out to grandparent div  
+
+  Event Tickering: 
+  Event Tickering means events will penetrate inside the html skeleton, means if we click the GrandParent div, then the event will
+  ticker to the Parent div then it will ticker to the child div.
+
+  These Bubbling and Tickering will continue to happen along with the events we need to decide that by which way we need to capture them
+
+-->
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <style>
+    div {
+      min-width: 100px;
+      min-height: 100px;
+      padding: 2rem;
+      border: 2px solid black;
+    }
+  </style>
+  <body>
+    <div id="grandparent">
+      GrandParent
+      <div id="parent">
+        Parent
+        <div id="child">Child</div>
+      </div>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+</html>
