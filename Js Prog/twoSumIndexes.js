@@ -29,7 +29,8 @@ var twoSum = function (nums, target) {
   let ans = [];
   nums.map((value, key) => {
     if (diffMap[target - value] >= 0) {
-      ans.push(key, diffMap[target - value]);
+      // ans.push(key, diffMap[target - value]); for inserting keys in the resultant array
+      ans.push(value, target - value); // for inserting values in the resultant array
     } else diffMap[value] = key;
   });
   return ans;
