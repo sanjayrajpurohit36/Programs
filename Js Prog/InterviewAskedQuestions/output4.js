@@ -1,3 +1,5 @@
+// Output question on the concept of MTQ, and callback queue
+
 const promise = new Promise((resolve, reject) => {
   console.log(1);
   setTimeout(() => {
