@@ -17,10 +17,10 @@
  * @returns Int
  */
 function product(title, price) {
-  this.title = title;
-  this.price = price;
-  console.log("this inside", this); // global object
-  return 9; //this statement will be ignored as function is called while using constructor invocation pattern
+	this.title = title;
+	this.price = price;
+	console.log("this inside", this); // global object
+	return 9; //this statement will be ignored as function is called while using constructor invocation pattern
 }
 
 /**
@@ -29,7 +29,6 @@ function product(title, price) {
  */
 
 var obj1 = product("pen", 20);
-
 console.log("Output of FUNCTION INVOCATION PATTERN: ", obj1);
 
 /******************************************************************************************/
@@ -40,7 +39,7 @@ console.log("Output of FUNCTION INVOCATION PATTERN: ", obj1);
  * value of this is always newly created object
  * */
 
-var v1 = product("pen", 20);
+var v1 = new product("pen", 20);
 console.log("what is returned from function called using CIP: ", v1);
 
 /******************************************************************************************/
@@ -51,9 +50,9 @@ console.log("what is returned from function called using CIP: ", v1);
  */
 
 var Foo = {
-  product: function (title, price) {
-    console.log(this);
-  },
+	product: function (title, price) {
+		console.log(this);
+	},
 };
 
 Foo.product();
@@ -72,19 +71,19 @@ Foo.product();
  **/
 
 function sendEmail(message, to) {
-  this.message = message;
-  this.to = to;
-  console.log(this);
+	this.message = message;
+	this.to = to;
+	console.log(this);
 }
 
 var Manager = {
-  name: "foo",
-  sal: 2333323233,
+	name: "foo",
+	sal: 2333323233,
 };
 
 var Emp = {
-  name: "koo",
-  sal: 23232333,
+	name: "koo",
+	sal: 23232333,
 };
 
 console.log("Output of apply & call");
