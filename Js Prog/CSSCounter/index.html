@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+			.language-wrapper {
+				display: flex;
+				flex-direction: column;
+				width: 150px;
+				height: 150px;
+				counter-reset: characters;
+			}
+			input:checked {
+				counter-increment: characters;
+			}
+			.total {
+				display: flex;
+				justify-content: space-between;
+				width: 150px;
+				height: 150px;
+				padding: 0.5rem;
+			}
+			.total:after {
+				content: counter(characters);
+			}
+			span {
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				padding: 0.5rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="language-wrapper">
+			<span>
+				<label for="c">C</label>
+				<input id="c" type="checkbox" />
+			</span>
+
+			<span>
+				<label for="c++">C++</label>
+				<input id="C++" type="checkbox" />
+			</span>
+
+			<span>
+				<label for="python">Python</label>
+				<input id="Python" type="checkbox" />
+			</span>
+
+			<span>
+				<label for="java">Java</label>
+				<input id="Java" type="checkbox" />
+			</span>
+			<p class="total">Total Selected:</p>
+		</div>
+	</body>
+</html>
