@@ -1,0 +1,30 @@
+<!-- What will be the output in console if user clicks the list items -->
+<!DOCTYPE >
+<html>
+	<head>
+		<title>List Click</title>
+	</head>
+	<body>
+		<ul>
+			<li > Alice</li>
+			<li > Bob</li>
+			<li > Eve</li>
+		</ul>
+
+	</body>
+	<script>
+		var lis = document.getElementsByTagName("li");
+		for(var i=0; i < lis.length; i++) {
+			var li = lis[i];
+			console.log(li);
+			li.onclick = function () {
+				console.log(i)
+			}
+		}
+	</script>
+    <style>
+        li {
+            cursor: pointer;
+        }
+    </style>
+</html>
