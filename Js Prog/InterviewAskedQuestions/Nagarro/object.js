@@ -22,5 +22,5 @@ Object.freeze(obj);
 // Trying to change the property after freezing the object
 obj.name = "Tom";
 obj.age = 21;
-obj.class = "XII"; // trying to add a new prop in the object
+obj.class = "XII"; //  trying to add a new prop in the object
 console.log("After freezing the object", obj);
