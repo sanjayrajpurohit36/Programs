@@ -7,9 +7,9 @@ function parent() {
 	function hoisted() {
 		return "I’m a function";
 	}
-	return hoisted();
+	return hoisted;
 }
-// console.log(parent()); // un-comment this and check the output
+console.log(parent()); // un-comment this and check the output
 
 // Output: Error : hoisted is not a function
 /* 
