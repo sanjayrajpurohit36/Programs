@@ -9,3 +9,5 @@ int main()
     ch = ch + a;
     cout << ch << endl;
 }
+
+// Output: k
