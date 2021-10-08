@@ -1,3 +1,5 @@
+//problem source: https://codeforces.com/problemset/problem/1592/A
+
 #include <bits/stdc++.h>
 
 #define pb push_back
