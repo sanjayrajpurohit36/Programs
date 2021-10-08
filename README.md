@@ -2,7 +2,7 @@ All these programs are for learning concepts of programming, JS & also I am addi
 ``` 
 dir codechef has the programming questions solved on Codechef.
 
-dir cpp programs has the programming questions & algos in c/cpp.
+dir Cpp Prog has the programming questions & algos in c/cpp.
 
 dir hackerearth has the programming questions solved on hackerearth.
 
