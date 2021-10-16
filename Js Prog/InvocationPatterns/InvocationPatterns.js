@@ -19,8 +19,8 @@
 function product(title, price) {
 	this.title = title;
 	this.price = price;
-	console.log("this inside", this); // global object
-	return 9; //this statement will be ignored as function is called while using constructor invocation pattern
+	console.log("this inside the function", this); // global object
+	return 9; //this statement will be ignored (iff anything else is returned instead of an Object) if the product function is called while using constructor invocation pattern
 }
 
 /**
@@ -29,18 +29,19 @@ function product(title, price) {
  */
 
 var obj1 = product("pen", 20);
-console.log("Output of FUNCTION INVOCATION PATTERN: ", obj1);
+console.log("FUNCTION INVOCATION PATTERN\n", obj1); // 9 will returned
 
 /******************************************************************************************/
 
 /**
  *  Constructor Invocation pattern CIP
  *  @return It will always return the newly created object
- * value of this is always newly created object
+ *  value of this is always newly created object (iff an explicitely no object is returned  
+ *  i.e return {} should not be there.)
  * */
 
 var v1 = new product("pen", 20);
-console.log("what is returned from function called using CIP: ", v1);
+console.log("CONSTRUCTOR INVOCATION PATTERN\n", v1);
 
 /******************************************************************************************/
 
@@ -51,7 +52,7 @@ console.log("what is returned from function called using CIP: ", v1);
 
 var Foo = {
 	product: function (title, price) {
-		console.log(this);
+		console.log("METHOD INVOCATION PATTERN\n", this);
 	},
 };
 
@@ -86,6 +87,6 @@ var Emp = {
 	sal: 23232333,
 };
 
-console.log("Output of apply & call");
+console.log("INDIRECT INVOCATION PATTERN\n");
 sendEmail.apply(Manager, ["Hello how are you", "sanjayrajpurohit36@gmail.com"]);
 sendEmail.call(Emp, "Hello How are you", "sanjayrajpurohit36@gmail.com");
