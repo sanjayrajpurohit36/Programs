@@ -1,7 +1,7 @@
 /*
     Create a constructor function which accepts Person details and creates a new object from it.
 */
-function Person (fname, lname, age, ) {
+function Person (fname, lname, age) {
         this.firstname = fname;
         this.lastname = lname;
         this.age = age;
