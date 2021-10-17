@@ -12,7 +12,7 @@ int operator1() {
 
 int operator2() { 
     double a = 6.0/4;  // 1.5 as one of the operand is float
-    int b = 6/4; // 1 as both the operands are int
+    int b = 6/4; //  1 as both the operands are int
     double c = a + b; // 1.5 + 1 = 2.5
     cout << endl<< c; // 2.5
 }
