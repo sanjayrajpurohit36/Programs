@@ -30,6 +30,8 @@ int findPeakUtil(int arr[], int low,
 			arr, (mid + 1), high, n);
 }
 
+
+
 // A mask function on recursive function findPeakUtil().
 int findPeak(int arr[], int n)
 {
