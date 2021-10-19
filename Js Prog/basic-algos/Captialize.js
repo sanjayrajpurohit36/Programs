@@ -1,4 +1,4 @@
-//Javascript algorithm to CAPITALIZE THE FIRST LETTER OF A SENTENCE!
+//WAP to CAPITALIZE THE FIRST LETTER OF EVERY WORD IN A SENTENCE!
 
 const capitalizeStr = (str) => {
   return str
