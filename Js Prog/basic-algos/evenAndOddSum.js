@@ -6,6 +6,7 @@ const evenOddSums = (arr) => {
   const ans = [];
   arr.forEach((i) => (i % 2 === 0 ? (evenSum += i) : (oddSum += i)));
   ans.push(evenSum, oddSum);
-  console.log(ans);
+  return ans;
 };
-evenOddSums([50, 60, 60, 45, 71]);
+let sumAns =evenOddSums([50, 60, 60, 45, 71]);
+console.log(sumAns);
