@@ -18,8 +18,8 @@ greet(0,1)
     created and it will be overwritten as "Hello World"
     arguments[0] = x;
     arguments[1] = y;
-    arguments[0] = "Hello"
-    arguments[1] = "World"
+    arguments[0] = "Hello";
+    arguments[1] = "World";
 
     Note: Arguments object will only be created only iff arguments are passed to the function 
     that's why when we're not passing the arguments 
