@@ -1,6 +1,6 @@
 /**
  *  This program is bookmarked on hackerearth
- *  Link: 
+ *  Link: https://www.hackerearth.com/problem/algorithm/rk-string/
  * 
  * */
 #include <iostream>
