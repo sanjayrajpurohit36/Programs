@@ -4,6 +4,9 @@
 
 const thisObj = {
 	thisFunc: function () {
+        /* Value of this inside "this" function according to it's calling on line number 13
+            is thisObj.
+        */
 		const arrowFunc = () => console.log(this);
 		arrowFunc();
 	},
