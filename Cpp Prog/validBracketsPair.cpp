@@ -42,13 +42,17 @@ public:
                 
             }
         }
-        return !st.empty() ? true : false;
+        return !st.empty() ? false : true;
     }
 };
 
 
 int main () {
     Solution S;
-    cout << S.isValid("[");
+    cout << S.isValid("["); 
+    cout << "\n"<< S.isValid("()");
+    cout << "\n"<< S.isValid("{}");
+    cout << "\n"<< S.isValid("[{()}]");
+    cout << "\n"<< S.isValid("[{()}");
     return 0;
 }
