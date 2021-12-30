@@ -1,0 +1,14 @@
+What is type Coercion?
+Conversion from one type to another in Js is called Coercion.
+
+Types of Coercion
+1. Implicit
+2. Explicit
+
+Implicit: The conversion which is done by Js itself while executing a program.
+
+Explicit: The conversion which me implicitely write in code to convert the type.
+Eg: let x = "10"
+    x = Number(10);
+    console.log(x);
+    x  will become Numeric 10 else it was "10".
