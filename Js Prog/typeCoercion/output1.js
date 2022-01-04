@@ -24,6 +24,4 @@ so, typeof randomValue will be "number" but the !before the typeof will change t
 so when false === "string" will compared it will be false, hence the if condition will be false so, 
 it will go in else block and as a result of that "Yay it's a string!" will be printed.
 
-
-
 */

@@ -6,9 +6,21 @@ Types of Coercion
 2. Explicit
 
 Implicit: The conversion which is done by Js itself while executing a program.
+Eg: let a = 20
+    let b = a + ""
+    console.log(a); // 20
+    console.log(b) // "20"
+    Here Js implicitly converts the type of 20 into "20", that's why it is called implicit Coercion.
 
-Explicit: The conversion which me implicitely write in code to convert the type.
+Explicit: The conversion which is made explicitly in code to convert the type.
 Eg: let x = "10"
-    x = Number(10);
+    let y = Number(10);
     console.log(x);
-    x  will become Numeric 10 else it was "10".
+    y will become Numeric 10 else x was "10".
+
+Note:  The type of y is explicitly converted, that's why it is called explicit Coercion.
+
+
+
+Note: "==" this equility does the implicit coercion to compare the values but
+      "===" doesn't alloes Js to do implicit coercion.
