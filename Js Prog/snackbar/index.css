@@ -7,6 +7,10 @@ body {
     padding: 1rem;
 }
 
+.trigger-btn { 
+    margin-top: 1rem;
+}
+
 .snackbar  {
     padding: 1rem;
     background: #5c5757;
