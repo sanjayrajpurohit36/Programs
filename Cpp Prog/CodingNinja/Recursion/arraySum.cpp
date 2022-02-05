@@ -7,6 +7,9 @@
 using namespace std;
 
 int sum(int arr[], int size) {
+    if(n == 1) { // if array is having only 1 element
+        return input[0];
+    }
     if(n == -1) {
         return 0;
     } else {
