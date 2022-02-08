@@ -1,0 +1,24 @@
+#app div {
+    border: 2px solid black;
+}
+
+#app {
+    padding: 1rem;
+    border: 2px solid red;
+}
+
+.banner {
+    border: 5px solid green;
+}
+
+.banner #btn {
+    width: 200px;
+    padding: 5px;
+    margin: 5px;
+    border: 5px solid white;
+    background: red;
+}
+
+#btn {
+    background: blue;
+}
