@@ -25,8 +25,7 @@ function checkProperty(object = {}, key = "") {
 	let result;
 	list.forEach((values) => {
 		if (result) result = result[values];
-		else if (object[values]) result = object[values];
-		else;
+		else result = object[values];
 	});
 	return result;
 }
