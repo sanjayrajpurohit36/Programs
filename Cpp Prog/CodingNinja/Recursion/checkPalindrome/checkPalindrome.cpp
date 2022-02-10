@@ -5,9 +5,10 @@
 
 
 #include<iostream>
+#include<string.h>
+
 using namespace std;
 
-#include<string.h>
 
 bool helper(char input[], int si, int ei){
     if(ei < si)return true;
