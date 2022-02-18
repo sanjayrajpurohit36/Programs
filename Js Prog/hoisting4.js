@@ -1,5 +1,6 @@
 /**
  * What will be the output of the below written code. 
+ * IMP output question.
  */
 
 // console.log(foo); // Reference error
