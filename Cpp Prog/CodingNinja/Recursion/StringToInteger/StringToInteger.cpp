@@ -32,8 +32,8 @@ void removeInvalidZeros(char input[], bool flag = false, int index = 0) {
 }
 
 int main() { 
-    char arr[]  =  {'1','0','1','2','3'}; // 10123 
-    // char arr[] = {'0', '0', '1','0', '1'} // 101
+    // char arr[]  =  {'1','0','1','2','3'}; // 10123 
+    char arr[] = {'0', '0', '1','0', '1'}; // 101
     removeInvalidZeros(arr);
     int i;
     for(i = 0; arr[i]!= '\0'; i++);
@@ -42,7 +42,7 @@ int main() {
     while(i--) {
         int digit = int(arr[i]) - 48;
         ans = ans + (digit * pow(10, (len - i)));
-        cout <<  ans << endl;
+        // cout <<  ans << endl;
     }
     cout << ans; // final ans when char array is converted into number;
     return 0;
