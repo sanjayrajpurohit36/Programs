@@ -1,0 +1,11 @@
+5
+2
+sa
+3
+san
+1
+a
+9
+hello_hi!
+5
+ghost
