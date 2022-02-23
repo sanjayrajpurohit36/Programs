@@ -1,11 +1,9 @@
 /**
-    WAP to check whether a string is palindrome or nor using recursion.
-    Note: in the below program si =  Start Index & ei = End Index
+    WAP to find the length of the string using recursion.
 */
 
 
 #include<iostream>
-#include<string.h>
 
 using namespace std;
 
