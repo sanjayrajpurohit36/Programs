@@ -1,0 +1,2 @@
+Result of merge sort
+2 3 5 6 8 9 
