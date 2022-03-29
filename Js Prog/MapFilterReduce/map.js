@@ -6,7 +6,7 @@ const arr = [
     {name: "Elon", lastName:"Musk", age: 35},
     {name: "Tim", lastName:"Cook", age: 50},
     {name: "Bill", lastName:"Gates", age: 59},
-    { name: "Tony", lastName: "Stark", age: 35 },
+    {name: "Tony", lastName: "Stark", age: 35 },
     {name: "Mark", lastName:"Zuckerberg", age: 35},
   ]
   
