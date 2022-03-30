@@ -53,8 +53,6 @@ class QuickSort {
 int main() {
     QuickSort QS;
     int T;
-    int arr[] = {5, 9, 8, 3, 2, 7, 1};
-    // int arr[] = {6, 2, 20, 8, 15, 3, 4};
     cin >> T;
     while (T--) {
         int size;
