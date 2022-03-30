@@ -25,26 +25,35 @@ class QuickSort {
             
             int idx1 = si, idx2 = ei;
             
-            while(idx1 < idx2) {
-                if(input[idx1] > pivot_element  && input[idx2] < pivot_element)  {
-                    swap(input[idx1], input[idx2]);
-                    idx2--;
+            while(idx1 < pi && idx2 > pi) {
+                if(input[idx1] >= pivot_element  && input[idx2] < pivot_element)  {
+                    int temp = input[idx1];
+                    input[idx1] = input[idx2];
+                    input[idx2] = temp;
+                    // swap(input[idx1], input[idx2]);
                     idx1++;
+                    idx2--;
                 }
                 else if (input[idx1] < pivot_element)
-                {
                     idx1++;
-                } else
+                else
                     idx2--;
             }
+            // cout << endl;
+            // for (int i = si; i <= ei; i++)
+            //     cout << input[i] << " ";
+            // cout << endl;
             return pi;
         }
 
         void quickSort(int arr[], int si, int ei) {
             // base case
-            if(si >= ei)
+            // cout << "si  ei" << endl;
+            // cout << si << " " << ei;
+            if (si >= ei)
                 return;
             int pi = partition(arr, si, ei);
+            // cout << "returned pi" << pi << "next call" <<  endl;
             quickSort(arr, si, pi - 1);
             quickSort(arr, pi + 1, ei);
         }
