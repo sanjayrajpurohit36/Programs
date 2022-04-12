@@ -16,19 +16,13 @@ void removeDuplicates(string str)
     int rp = 0, wp = 0;
     while(rp < str.length()) {
 
-        if(ump[str[rp]]) {
-                rp++;
-        } else {
+        if(!ump[str[rp]]) {
             ump[str[rp]] = true;
-            if(rp == wp) {
-                rp++;
-                wp++;
-            } else {
-                str[wp] = str[rp];
-                wp++;
-                rp++;
-            }
-        }
+            str[wp] = str[rp];
+            wp++;
+            rp++;
+        } else
+            rp++;
     }
     cout << str.substr(0, wp) << endl;
 }
