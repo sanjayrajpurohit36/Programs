@@ -19,10 +19,10 @@ function reverseHelper(strArr, start, end) {
 function reverseSentence(input) {
     let strArray = input.split("");
     let start = 0;
-    let end = input.length;
+    let end = strArray.length;
     let ans = reverseHelper(strArray, 0, input.length);
     let i;
-    for (i = 0; i < strArray.length; i++) {
+    for (i = 0; i < end; i++) {
       if (strArray[i] === " ") {
         ans = reverseHelper(strArray, start, i - 1);
         start = i + 1;
