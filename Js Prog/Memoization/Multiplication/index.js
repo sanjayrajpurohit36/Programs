@@ -11,7 +11,7 @@ let memoizedMultiplication = (function () {
             return ans;
         else {
             prevArg1 = arg1, prevArg2 = arg2;
-            /* this is is being added to increase the execution time of the function which will clearly 
+            /* this loop is is being added to increase the execution time of the function which will clearly 
                 show the time difference between normal function call and memoized function call. 
             */
             for (let i = 0; i < 100000000; i++) { }
