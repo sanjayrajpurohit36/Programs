@@ -21,7 +21,7 @@ public:
     Student()
     { // This is my default constructor
         cout << "Default Constructor called";
-        name = "Max"
+        name = "Max";
     }
 
     Student(int roll, int age) 
