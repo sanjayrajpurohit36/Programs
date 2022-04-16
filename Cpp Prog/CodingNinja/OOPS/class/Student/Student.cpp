@@ -20,7 +20,7 @@ public:
     
     Student()
     { // This is my default constructor
-        cout << "Default Constructor called";
+        cout << "\nDefault Constructor called";
         name = "Max";
     }
 
