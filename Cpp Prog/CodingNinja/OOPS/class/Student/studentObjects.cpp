@@ -1,18 +1,14 @@
 /*
-    Create a class student and create its object.
+    Create Student classes's Object 
     1. Statically
     2. Dynamically
 */
 #include<iostream>
+#include "Student.cpp"
 using namespace std;
 
-class Student {
-public:
-    int rollnumber;
-    int age;
-};
-
-int main() {
+int main()
+{
     // static object
     Student s1;
     s1.rollnumber = 27;
