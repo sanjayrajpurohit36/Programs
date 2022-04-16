@@ -29,7 +29,7 @@ public:
         cout << "\nParametrized Constructor gets called, & sets the values of class members as passed during the object creation";
         // This is parametrized constructor
         rollnumber = roll;
-        this->age = age;
+        this->age = age; // very imp using this as the argument name and the class member name are same which is age
     }
 
     void setName(string newName) {
