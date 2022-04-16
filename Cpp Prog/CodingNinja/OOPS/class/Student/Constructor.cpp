@@ -9,6 +9,9 @@ using namespace std;
 int main()
 {
     Student s1;
-    cout << endl << s1.getName(); // name will be already set as Max by default constructor
+    cout << endl <<"Name : "<< s1.getName(); // name will be already set as Max by default constructor
+
+    Student s2(10, 20); // For this object parameterized constructor will be called
+    cout << endl << "Age : " << s1.age << " Rollnumber : " << s1.rollnumber;
     return 0;
 }
