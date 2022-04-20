@@ -1,7 +1,8 @@
 /*
-    Create a class student with two public members rollnumber of type (int) and age of type (int)
-    and one private member name of type (string)
+    Explain the concept of Deep Copy and Shallow Copy.
+    Which one we should use and why?
 */
+
 #include<iostream>
 #include<string.h>
 using namespace std;
