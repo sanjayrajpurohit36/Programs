@@ -44,10 +44,22 @@ public:
         Even if we have the data member name and parameter name as same we do not need to use this->age(age) as it is totally
         differentiable that the name outside the brackets () is data members of the class and the inside ones are function parameters.
 
+
+        Also we need to use the initialization list for declaring the reference variables as we know reference variables also have to 
+        be initialized at the time of declaration.
+
+        So suppose we need to declare int &x a reference variable which should point to age, then 
+        we have to write like this Student(int age, int r) : x(this->age) {
+
+        }
+
+        we had to use this->age as we have a parameter name as age so to avoid the conflict we have to use this->age
+
     */
     int const rollnumber; 
     
     Student(int age, int r) : rollnumber(r),  age(age) {
+        cout << "Parametrized Constructor";
     }
 
     void display() {
