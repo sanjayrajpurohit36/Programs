@@ -28,8 +28,10 @@ class Fraction {
             numerator = numerator / gcd;
             denominator /= gcd;
         }
-
-        void multiply(Fraction f2) {
+        /*
+            Fraction const &f2 makes the f2 a constant reference, which means it can only read the value but can't make any change to it.
+        */
+        void multiply(Fraction const &f2) {
             numerator = numerator * f2.numerator;
             denominator = denominator * f2.denominator;
             print();
