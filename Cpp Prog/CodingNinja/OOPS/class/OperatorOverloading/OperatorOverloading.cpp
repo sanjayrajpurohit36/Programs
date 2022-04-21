@@ -45,7 +45,7 @@ class Fraction {
             int y = lcm / f2.denominator;
 
             int num = numerator * x + f2.numerator * y;
-            Fraction f3(num, lcm);
+            Fraction f3(num, lcm); // created this as we need to return a new Fraction or we can say that the return type is Fraction
             f3.simplify();
             return f3;
         }
@@ -94,5 +94,49 @@ class Fraction {
         // Function declared as const as it is not making any change to any object's property
         void print() const {
             cout << "(" << numerator << " / " << denominator << ")";
+        }
+
+        /*
+            Prefix operator overload
+            int a = 5;
+            cout << ++a; //6
+        */
+        Fraction& operator++() {
+            numerator = numerator + denominator;
+            simplify();
+            return *this;
+        }
+
+        /*
+            Postfix operator overload
+            int a = 5;
+            int ans = a++;
+            cout << ans;  // 5;
+            cout << a; // 6;
+
+            We have to mention (int) int the argument to make the compiler interpret that it is a postfix 
+            operator overload.
+        */
+
+       Fraction operator++(int) {
+           Fraction fNew(numerator, denominator);
+           numerator = numerator + denominator;
+           fNew.simplify();
+           simplify();
+           return fNew;
+       }
+
+       /*
+            Overload += operator
+       */
+
+        Fraction& operator+=(Fraction &f3){
+            int lcm = denominator * f3.denominator;
+            int x = lcm / denominator;
+            int y = lcm / f3.denominator;
+            numerator = x * numerator + y * f3.numerator;
+            denominator = lcm;
+            simplify();
+            return *this;
         }
 };

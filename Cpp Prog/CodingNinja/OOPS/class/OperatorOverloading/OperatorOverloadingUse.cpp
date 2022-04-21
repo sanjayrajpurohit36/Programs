@@ -46,7 +46,51 @@ int main()
     } else {
         cout << "not equal";
     }
-    // cout << ans;
 
+
+    // Prefix operator overloading ++x
+    cout << endl << "Post increment operator overload: " << endl;
+    Fraction f8(6, 1);
+    f8.print();
+    cout << endl;
+    Fraction f9 = ++(++f8); 
+    /*
+        Expected Behaviour: Ideally the value of f8 should become 8/1 but it is coming as 7/1 but value of f9 is coming fine which is 8/1.
+        To make this nesting work we have to return the fraction value by reference
+        from the class so that the memory which the system uses for storing the temporary result does not get created
+        it should use the same memory of f8.
+        
+        then it will be interpreted like f8 = ++f8;
+        
+        so in the classes member function we need to use "&" after the return type to return the value by reference
+        to make it work that's all.
+    */
+    f8.print();
+    f9.print();
+    cout << endl;
+
+    // Postfix operator overloading x++
+
+    /*
+        Note: there is no chaining in post increment operator so, we do not need to handle that
+    */
+
+    Fraction f10(6,1);
+    Fraction f11 = f10++;
+    cout << endl;
+    f10.print();
+    f11.print();
+
+
+    /*
+        += Operator overload
+    */
+    
+    cout << endl;
+    Fraction f12(6, 1);
+    Fraction f13(5, 1);
+    f12 += f13 += f13;
+    cout << endl;
+    f12.print();
     return 0;
 }
