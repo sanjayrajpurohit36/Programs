@@ -59,7 +59,8 @@ int LengthOfLL(Node *nodePtr, int length = 0) {
     if(nodePtr == NULL) {
         return length;
     } else {
-        LengthOfLL(nodePtr-> next, ++length);
+        int len =  LengthOfLL(nodePtr-> next, ++length);
+        return len;
     }
 }
 
