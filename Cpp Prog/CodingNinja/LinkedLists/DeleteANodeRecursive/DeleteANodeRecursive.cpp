@@ -30,7 +30,7 @@ Node *deleteNodeHelper(Node *head, Node *ptr, int pos, int ci = 0)
         
         currentNode -> next = nextNode;
         delete delNode;
-    } else if( ci != pos -1 && ptr != NULL) {
+    } else if( ci != pos - 1 && ptr != NULL) { // if ci (current index ) != pos - 1 && ptr is also != NULL then jump to next node and increment the ci
         	ptr = ptr-> next;
         	return deleteNodeHelper(head, ptr, pos, ++ci);
     } else return head;
