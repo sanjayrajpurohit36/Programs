@@ -20,7 +20,10 @@ Node* insertNodeAtPos(Node *head, int data, int pos)
             temp = temp->next;
             i++;
         }
-        // added condition to make sure that temp has not reached to NULL
+        /* 
+            added condition to make sure that temp has not reached to NULL, 
+            if user enters pos more than the size of the node
+        */
         if(temp != NULL) {
             newNode->next = temp->next;
             temp->next = newNode;
