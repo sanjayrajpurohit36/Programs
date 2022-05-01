@@ -7,6 +7,11 @@
 #include "Class.cpp"
 using namespace std;
 
+/*
+    Function reverse 
+    @param head head pointer of the linked list
+    reverses the linked list iteratively
+*/
 Node *reverseTwo(Node *head)
 {
     if(head == NULL || head -> next == NULL)
@@ -29,6 +34,13 @@ Node *reverseTwo(Node *head)
     b = f;
     return b;
 }
+
+/*
+    Function reverse 
+    @param head head pointer of the linked list
+    reverses the linked list iteratively
+*/
+
 Node *reverse(Node *head)
 {
     // Write your code here
