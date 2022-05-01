@@ -5,7 +5,30 @@
 #include <iostream>
 #include "Class.cpp"
 using namespace std;
+// #define null NULL;
 
+Node *reverseTwo(Node *head)
+{
+    if(head == NULL || head -> next == NULL)
+        return head;
+    Node *b = NULL, *f = head, *nextNode = head->next;
+    
+    while(nextNode != NULL) {
+        f->next = b;
+        b = f;
+        f = nextNode;
+        nextNode = nextNode->next;
+    }
+
+    /* 
+        at this point f is on the last node of the linked list and pointer "b" is on 
+        the second last node but they are not connected from b -> f we need to connect 
+        them as f -> b so in order to do that.
+    */
+    f->next = b;
+    b = f;
+    return b;
+}
 Node *reverse(Node *head)
 {
     // Write your code here
@@ -54,8 +77,8 @@ int main()
         cout << "Printing linked list in reverse not changing the pointers: ";
         printReverse(head);
         cout << endl;
-        cout << "Linked List";
-        // head = reverse(head);
+        cout << "Linked List: ";
+        head = reverseTwo(head);
         printList(head);
     }
     return 0;
