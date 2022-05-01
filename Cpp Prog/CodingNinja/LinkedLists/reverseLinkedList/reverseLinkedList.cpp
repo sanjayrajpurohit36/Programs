@@ -1,11 +1,11 @@
 /*
-    Write a program to reverse the linked list
+    WAP to reverse a LinkedList
+    Problem Link: https://leetcode.com/problems/reverse-linked-list/
 */
 
 #include <iostream>
 #include "Class.cpp"
 using namespace std;
-// #define null NULL;
 
 Node *reverseTwo(Node *head)
 {
@@ -78,7 +78,7 @@ int main()
         printReverse(head);
         cout << endl;
         cout << "Linked List: ";
-        head = reverseTwo(head);
+        head = recursiveReverseLinkedList(head);
         printList(head);
     }
     return 0;
