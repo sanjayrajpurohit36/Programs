@@ -1,5 +1,6 @@
 /*
-    You have been given a random integer array/list(ARR) and a number X. Find and return the triplet(s) in the array/list which sum to X.
+    You have been given a random integer array/list(ARR) and a number X. 
+    Find and return the triplet(s) in the array/list which sum to X.
     Note: count the repeatitive numbers.
 */
 
