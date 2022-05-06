@@ -40,7 +40,6 @@ public:
         }
 
         void enqueue(T d) {
-            cout << "NI " << nextIndex << endl;
             if (size == capacity)
             {
                 cout << "Queue is full" << endl;
