@@ -1,6 +1,8 @@
 /*
     Implement a stack using linked list
     Following is the structure of the node class 
+    In the below implemented stack the push and pop operations are taking
+    O(1) time.
 */ 
 class Node {
     public :
@@ -12,11 +14,9 @@ class Node {
         next = NULL;
     }
 };
-
 class Stack {
 	// Define the data members
     Node *head;
-    Node *tail;
     int nextIndex = 0;
     
     
@@ -24,7 +24,6 @@ class Stack {
     Stack() {
         // Implement the Constructor
         head = NULL;
-        tail = NULL;
         nextIndex = 0;
     }
 
@@ -33,6 +32,7 @@ class Stack {
     int getSize() {
         // Implement the getSize() function
         return nextIndex;
+      	
     }
 
     bool isEmpty() {
@@ -46,11 +46,10 @@ class Stack {
         if(head == NULL) {
             Node *newNode = new Node(element);
             head = newNode;
-            tail = newNode;
         } else {
             Node *newNode = new Node(element);
-            tail -> next = newNode;
-            tail = newNode;
+            newNode -> next = head;
+            head = newNode;
         }
         nextIndex++;
     }
@@ -60,28 +59,10 @@ class Stack {
         if(head == NULL) {
             return -1;
         }
-        
-        if(head -> next == NULL) {
-            Node *delNode = head;
-        	int deletedElement = head -> data;
-        	delete delNode;
-            head = NULL;
-            tail = NULL;
-            nextIndex--;
-            return deletedElement;
-            
-        }
-        Node *itr = head, *delNode = head;
-        while(delNode -> next != NULL) {
-            if(delNode -> next -> next == NULL) 
-                itr = delNode;
-            delNode = delNode -> next;
-            
-        }
-        itr -> next = NULL;
-        int deletedElement = delNode -> data;
+        Node *delNode = head;
+        int deletedElement = head -> data;
         delete delNode;
-        tail = itr;
+		head = head -> next;
         nextIndex--;
         return deletedElement;
     }
@@ -89,6 +70,6 @@ class Stack {
     int top() {
         // Implement the top() function
         if(head == NULL) return -1;
-        return tail -> data;
+        return head -> data;
     }
 };
