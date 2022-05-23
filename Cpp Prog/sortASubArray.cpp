@@ -1,10 +1,9 @@
-// Sort an array where a subarray of a sorted array is in reverse order
 /*
-Uncomment any array and check the output
+ Q1. Sort an array where a subarray of a sorted array is in reverse order
+    Uncomment any array and check the output
 */
 
 #include <iostream>
-#include <bits/stdc++.h>
 using namespace std;
 
 int main()
