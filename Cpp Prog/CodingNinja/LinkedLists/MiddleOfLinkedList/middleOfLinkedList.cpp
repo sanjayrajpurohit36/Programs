@@ -19,7 +19,7 @@ Node *midPoint(Node *head)
     Solution Explanation: 
     There are two cases in this question.
     1. if the elements are odd then middle element is clearly identified.
-        Eg 1 ->  2 -> 3 -> 4 -> 5 -> X
+        Eg 1 -> 2 -> 3 -> 4 -> 5 -> X
         Middle : 3
     2 if the elements are even in that case middle element is the last element of the first half  
         Eg 1 -> 2 -> 3 -> 4 -> X
