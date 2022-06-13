@@ -8,6 +8,7 @@ function bar() {
   }
 }
 
+console.log(bar()); // [Function: foo]
 console.log(typeof bar()); // function
 console.log(global.foo, global);
 
