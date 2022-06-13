@@ -7,7 +7,7 @@
         Sample Output:
                         10 5 4 3 2 1
 
-        Sample Input: 
+        Sample Input: `
                         2
                         5
                         2 8 15 1 10
@@ -17,7 +17,7 @@
         Sample Outpput: 
                         10 1 15 8 2 
                         30 20 10 
-/*
+*/
 
 #include <iostream>
 #include <queue>
