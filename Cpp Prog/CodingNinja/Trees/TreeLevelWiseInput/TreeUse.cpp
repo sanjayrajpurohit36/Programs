@@ -69,6 +69,17 @@ int countNodes(TreeNode<int>* root, int count = 0) {
     return ans;
 }
 
+void printAtLevelK(TreeNode<int>* root, int level) {
+    if(level == 0) {
+        cout << root->data << " ";
+    }
+    level = level- 1;
+    for (int i = 0; i < root->children.size(); i++)
+    {
+        printAtLevelK(root->children[i], level);
+    }
+}
+
 int main() {
     // TreeNode<int>* root = new TreeNode<int>(1);
     // TreeNode<int>* TreeNode1 = new TreeNode<int>(2);
@@ -84,7 +95,10 @@ int main() {
     cout << endl;
     displayTreeLevelWise(root);
 
-    cout << endl;
+    cout << "\nPrint total no of nodes : " << endl;
     cout << countNodes(root);
+
+    cout <<" \nPrint all nodes at level 1 : "<< endl;
+    printAtLevelK(root, 1);
     return 0;
 }
