@@ -22,3 +22,5 @@ Print total no of nodes :
 8 
 Print all nodes at level 1 : 
 2 3 4 
+Count leaf nodes of the tree : 
+5

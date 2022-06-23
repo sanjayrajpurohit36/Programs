@@ -61,7 +61,7 @@ void displayTreeLevelWise(TreeNode<int> *root) {
     }
 }
 /**
- * @brief Get the Height of a tree
+ * @brief Get the Height of a given tree
  *
  * @param root Node
  * @return int
@@ -112,6 +112,27 @@ void printAtLevelK(TreeNode<int>* root, int level) {
     }
 }
 
+/**
+ * @brief Count leaf nodes of a given tree
+ *
+ * @return int
+ */
+
+int countLeafNodes(TreeNode<int>* root) {
+    if(root == NULL) // edge case
+        return -1;
+    if(root->children.empty()) { // if tree has only root node no children
+        return 1;
+    }
+    int leafNodeCount = 0;
+    if(root->children.size() > 0)
+        for (int i = 0; i < root->children.size(); i++) {
+            leafNodeCount += countLeafNodes(root->children[i]);
+        }
+    else return leafNodeCount + 1;
+    return leafNodeCount;
+}
+
 int main() {
     // TreeNode<int>* root = new TreeNode<int>(1);
     // TreeNode<int>* TreeNode1 = new TreeNode<int>(2);
@@ -135,5 +156,8 @@ int main() {
 
     cout <<" \nPrint all nodes at level 1 : "<< endl;
     printAtLevelK(root, 1);
+
+    cout << "\nCount leaf nodes of the tree : " << endl;
+    cout << countLeafNodes(root);
     return 0;
 }
