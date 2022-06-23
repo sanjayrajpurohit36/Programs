@@ -133,6 +133,22 @@ int countLeafNodes(TreeNode<int>* root) {
     return leafNodeCount;
 }
 
+/**
+ * @brief Post order traversal
+ *
+ * @param root
+ */
+void printPostOrder(TreeNode<int>* root) {
+    // Write your code here
+    if(root == NULL)  { // edge case
+        return;
+    }
+    for( int i = 0 ; i < root -> children.size(); i++) {
+        printPostOrder(root->children[i]);
+    }
+    cout << root-> data << " ";
+}
+
 int main() {
     // TreeNode<int>* root = new TreeNode<int>(1);
     // TreeNode<int>* TreeNode1 = new TreeNode<int>(2);
@@ -159,5 +175,8 @@ int main() {
 
     cout << "\nCount leaf nodes of the tree : " << endl;
     cout << countLeafNodes(root);
+
+    cout << "\nPost order traversal : " << endl;
+    printPostOrder(root);
     return 0;
 }
