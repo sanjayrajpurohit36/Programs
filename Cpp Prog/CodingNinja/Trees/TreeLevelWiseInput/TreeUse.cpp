@@ -73,10 +73,9 @@ void printAtLevelK(TreeNode<int>* root, int level) {
     if(level == 0) {
         cout << root->data << " ";
     }
-    level = level- 1;
     for (int i = 0; i < root->children.size(); i++)
     {
-        printAtLevelK(root->children[i], level);
+        printAtLevelK(root->children[i], level-1);
     }
 }
 
