@@ -62,6 +62,8 @@ void displayTreeLevelWise(TreeNode<int> *root) {
 }
 
 int countNodes(TreeNode<int>* root, int count = 0) {
+    if(root == NULL) // edge case
+        return 0;
     int ans = 1;
     for (int i = 0; i < root->children.size(); i++) {
         ans += countNodes(root->children[i]);
@@ -70,6 +72,8 @@ int countNodes(TreeNode<int>* root, int count = 0) {
 }
 
 void printAtLevelK(TreeNode<int>* root, int level) {
+    if(root == NULL) // edge case
+        return;
     if(level == 0) {
         cout << root->data << " ";
     }
