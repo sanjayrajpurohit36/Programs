@@ -60,7 +60,30 @@ void displayTreeLevelWise(TreeNode<int> *root) {
         cout << endl;
     }
 }
+/**
+ * @brief Get the Height of a tree
+ *
+ * @param root Node
+ * @return int
+ */
+int getHeight(TreeNode<int>* root) {
+    if(root == NULL)
+        return -1;
+    int height = 0;
+    for (int i = 0; i < root->children.size(); i++) {
+        int subTreeHeight = getHeight(root->children[i]);
+        height = max(height, subTreeHeight);
+    }
+    return height + 1; // doing + 1 for root node
+}
 
+/**
+ * @brief Count nodes of a given tree
+ *
+ * @param root
+ * @param count
+ * @return int
+ */
 int countNodes(TreeNode<int>* root, int count = 0) {
     if(root == NULL) // edge case
         return 0;
@@ -71,6 +94,12 @@ int countNodes(TreeNode<int>* root, int count = 0) {
     return ans;
 }
 
+/**
+ * @brief Print all the nodes at level K
+ *
+ * @param root
+ * @param level
+ */
 void printAtLevelK(TreeNode<int>* root, int level) {
     if(root == NULL) // edge case
         return;
@@ -97,6 +126,9 @@ int main() {
     // display the nodes
     cout << endl;
     displayTreeLevelWise(root);
+
+    cout << "\nPrint height of the tree : " << endl;
+    cout << getHeight(root);
 
     cout << "\nPrint total no of nodes : " << endl;
     cout << countNodes(root);

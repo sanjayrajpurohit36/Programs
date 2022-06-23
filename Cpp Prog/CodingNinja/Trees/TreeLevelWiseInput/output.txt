@@ -16,6 +16,8 @@ Enter node data :
 7 : 
 8 : 
 
+Print height of the tree : 
+3
 Print total no of nodes : 
 8 
 Print all nodes at level 1 : 
