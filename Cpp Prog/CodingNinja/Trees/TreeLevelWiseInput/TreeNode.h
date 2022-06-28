@@ -11,6 +11,16 @@ class TreeNode {
         TreeNode(T data) {
             this->data = data;
         }
+
+        /**
+         * @brief Destroy the Tree Node object
+         *
+         */
+        ~TreeNode () {
+            for (int i = 0; i < children.size(); i++) {
+                delete children[i];
+            }
+        }
 };
 
 /*
