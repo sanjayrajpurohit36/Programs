@@ -149,6 +149,27 @@ void printPostOrder(TreeNode<int>* root) {
     cout << root-> data << " ";
 }
 
+/**
+ * @brief Function to delete tree after all the operations are done
+ *
+ * @param root
+ */
+void deleteTree(TreeNode * root) {
+    /*
+        We can't delete the root because after deleting the root node, we'll lose all the
+        address of the children of the root node, because the vector which we have declared with every node
+        to store the address of the children nodes is statically allocated so that will also be deleted,
+        so in order to delete the whole tree we need to delete the children first then the root, so
+        we'll traverse the whole tree using POST order
+
+    */
+
+    for (int i = 0; i < root->children.size(); i++) {
+        deleteTree(root - children[i]);
+    }
+    delete root;
+}
+
 int main() {
     // TreeNode<int>* root = new TreeNode<int>(1);
     // TreeNode<int>* TreeNode1 = new TreeNode<int>(2);
@@ -178,5 +199,8 @@ int main() {
 
     cout << "\nPost order traversal : " << endl;
     printPostOrder(root);
+
+    // deleteTree(root); // this function will also delete the whole tree
+    delete root; // deleting the tree like this we'll need to implement destructor
     return 0;
 }
