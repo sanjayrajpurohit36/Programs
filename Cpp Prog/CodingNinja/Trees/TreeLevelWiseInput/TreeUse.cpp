@@ -3,12 +3,25 @@
 */
 
 #include<iostream>
+#include<stack>
 #include<queue>
 #include "TreeNode.h"
 
 using namespace std;
 
-TreeNode<int>* takeInputLevelwise() {
+class Solution {
+    public:
+        TreeNode<int>* max;
+        TreeNode<int>* smax;
+
+        Solution() {
+            max = NULL;
+            smax = NULL;
+        }
+}S;
+
+TreeNode<int> * takeInputLevelwise()
+{
     int rootData;
     cout << "Enter node data : ";
     cin >> rootData;
@@ -154,7 +167,7 @@ void printPostOrder(TreeNode<int>* root) {
  *
  * @param root
  */
-void deleteTree(TreeNode * root) {
+void deleteTree(TreeNode<int> * root) {
     /*
         We can't delete the root because after deleting the root node, we'll lose all the
         address of the children of the root node, because the vector which we have declared with every node
@@ -165,11 +178,65 @@ void deleteTree(TreeNode * root) {
     */
 
     for (int i = 0; i < root->children.size(); i++) {
-        deleteTree(root - children[i]);
+        deleteTree(root -> children[i]);
     }
     delete root;
 }
 
+/**
+ * @brief Get the Second Largest Node object
+ *
+ * @param root
+ * @return TreeNode<int>*
+ */
+TreeNode<int>* getSecondLargestNode(TreeNode<int>* root) {
+    // Write your code here
+    if(root == NULL)
+        return NULL;
+
+    if(S.max == NULL) {
+        S.max = root;
+    }
+
+    for (int i = 0; i < root->children.size(); i++) {
+        S.smax = getSecondLargestNode(root->children[i]);
+    }
+    if(S.max->data < root->data) {
+        S.smax = S.max;
+        S.max = root;
+    }
+    if(S.smax == NULL || (S.smax->data < root->data && S.max->data > root->data)) {
+        S.smax = root;
+    }
+    return S.smax;
+}
+
+
+/**
+ * @brief replace all nodes values with its depth value helper
+ *
+ * @param root
+ * @param depth
+ */
+void replaceWithDepthValueHelper(TreeNode<int>* root, int depth = 0) {
+    if(root == NULL) return;
+
+    root->data = depth;
+    for(int i = 0 ; i < root-> children.size(); i++) {
+        replaceWithDepthValueHelper(root->children[i], depth + 1) ;
+    }
+    depth = depth - 1;
+}
+
+/**
+ * @brief replace all node values with its depth value
+ *
+ * @param root
+ */
+void replaceWithDepthValue(TreeNode<int>* root) {
+    // Write your code here
+    replaceWithDepthValueHelper(root);
+}
 int main() {
     // TreeNode<int>* root = new TreeNode<int>(1);
     // TreeNode<int>* TreeNode1 = new TreeNode<int>(2);
@@ -199,6 +266,14 @@ int main() {
 
     cout << "\nPost order traversal : " << endl;
     printPostOrder(root);
+
+    cout << "\nSecond Largest Node in tree : " << endl;
+    TreeNode<int> *secondLargestNode = getSecondLargestNode(root);
+    cout << secondLargestNode->data;
+
+    // cout << "\n Replaced all nodes with their depth value" << endl;
+    // replaceWithDepthValue(root);
+    // displayTreeLevelWise(root);
 
     // deleteTree(root); // this function will also delete the whole tree
     delete root; // deleting the tree like this we'll need to implement destructor
