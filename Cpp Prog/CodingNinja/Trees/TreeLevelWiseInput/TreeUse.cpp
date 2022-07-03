@@ -29,7 +29,6 @@ TreeNode<int> * takeInputLevelwise()
     queue <TreeNode<int>*> pendingNodes;
     pendingNodes.push(root);
 
-
     // we need to do this process until the queue becomes empty
     while(!pendingNodes.empty()) {
         TreeNode<int>* front = pendingNodes.front();
@@ -237,6 +236,34 @@ void replaceWithDepthValue(TreeNode<int>* root) {
     // Write your code here
     replaceWithDepthValueHelper(root);
 }
+
+
+/**
+ * @brief Check both the trees are identical
+ *
+ * @param root1
+ * @param root2
+ * @return true
+ * @return false
+ */
+bool areIdentical(TreeNode<int> *root1, TreeNode<int> * root2) {
+    // Write your code here
+	if(root1->children.size() != root2->children.size()) {
+        return false;
+    }
+
+    for(int i = 0; i < root1->children.size() ; i++) {
+    	return areIdentical(root1->children[i], root2->children[i]);
+    }
+
+    for(int i = 0; i < root1->children.size() ; i++) {
+        if(root1->children[i] != root2->children[i]) {
+            return false;
+        }
+    }
+    return true;
+
+}
 int main() {
     // TreeNode<int>* root = new TreeNode<int>(1);
     // TreeNode<int>* TreeNode1 = new TreeNode<int>(2);
@@ -247,10 +274,12 @@ int main() {
     // root->children.push_back(TreeNode2);
 
     TreeNode<int>* root = takeInputLevelwise();
-
+    TreeNode<int>* root2 = takeInputLevelwise();
     // display the nodes
     cout << endl;
     displayTreeLevelWise(root);
+    displayTreeLevelWise(root2);
+
 
     cout << "\nPrint height of the tree : " << endl;
     cout << getHeight(root);
@@ -274,6 +303,10 @@ int main() {
     // cout << "\n Replaced all nodes with their depth value" << endl;
     // replaceWithDepthValue(root);
     // displayTreeLevelWise(root);
+
+    cout << "\nCheck if both the trees are identical" << endl;
+    // cout << areIdentical(root, root2); not able to take the second tree in input
+
 
     // deleteTree(root); // this function will also delete the whole tree
     delete root; // deleting the tree like this we'll need to implement destructor
