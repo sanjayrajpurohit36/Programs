@@ -1,0 +1,29 @@
+Enter root data : Enter left child of 1
+Enter right child of 1
+Enter left child of 2
+Enter right child of 2
+Enter left child of 3
+Enter right child of 3
+Enter left child of 4
+Enter right child of 4
+Enter left child of 5
+Enter right child of 5
+Enter left child of 6
+Enter right child of 6
+Enter left child of 7
+Enter right child of 7
+Enter left child of 8
+Enter right child of 8
+Enter left child of 9
+Enter right child of 9
+
+ Display tree levelwise : 
+1:L:2,R:3
+2:L:4,R:5
+3:L:6,R:7
+4:L:-1,R:-1
+5:L:8,R:9
+6:L:-1,R:-1
+7:L:-1,R:-1
+8:L:-1,R:-1
+9:L:-1,R:-1
