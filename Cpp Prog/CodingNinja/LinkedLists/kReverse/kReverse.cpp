@@ -54,7 +54,7 @@ Node *kReverse(Node *head, int K) {
             // setting counter to 1 and jumping to next node because after this b-> next will se set as NULL
             counter = 1;
             tf = tf->next;
-            // breacking the K elements of linked list
+            // breaking the K elements of linked list
             b->next = NULL;
 
             Pair obj = reverse(f);
