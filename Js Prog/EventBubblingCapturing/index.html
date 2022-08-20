@@ -1,24 +1,24 @@
-<!-- 
-  Event Bubbling(MS):- 
+<!--
+  Event Bubbling(MS):-
   Event bubbling means that the events will have a tendency of bubble out so in this html structure if we click
-  child, then the event will bubble out to parent div then from parent div it will bubble out to grandparent div  
+  child, then the event will bubble out to parent div then from parent div it will bubble out to grandparent div
 
-  Event Trickling(Netscape): 
+  Event Trickling(Netscape):
   Event Trickling means events will penetrate inside the html skeleton, means if we click the GrandParent div,
   then the event will trickle to the Parent div then it will trickle to the child div.
-  
-  In addEventListener method we can send the third param as useCapture flag(boolean)(true/false) based on that 
+
+  In addEventListener method we can send the third param as useCapture flag(boolean)(true/false) based on that
   we can use the bubbling / trickling phenomena.
   Syntax: addEventListener("event",function callback () {}, useCapture)
-  Eg: 
+  Eg:
   1. addEventLstener ("click", () => {console.log("div clicked"), useCapture})
   2. addEventLstener ("scroll", () => {console.log("scrolling"), useCapture})
 
-  These Bubbling and Trickling will continue to happen along with the events we need to decide that by which way 
+  These Bubbling and Trickling will continue to happen along with the events we need to decide that by which way
   we need to capture them using using the useCapture flag.
-  
-  if useCapture is true then bubbling will be captured
-  if useCapture is false then trickeling will be captured
+
+  if useCapture is false then bubbling will be captured
+  if useCapture is true then trickeling will be captured
 
 
 -->
@@ -38,7 +38,7 @@
 			GrandParent
 			<div id="parent">
 				Parent
-				<div id="child">Child</div>
+				<div id="child1">Child1</div>
 			</div>
 		</div>
 	</body>
