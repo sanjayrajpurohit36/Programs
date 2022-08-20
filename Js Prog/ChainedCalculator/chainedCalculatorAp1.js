@@ -1,6 +1,6 @@
 /***   Chained Calculator Approach 1  ***
     In this approach we will use the this object & will add all the functions to that object
-    the drawback of this approach is only that we're pollutint the global this object of the JS.
+    the drawback of this approach is only that we're polluting the global this object of the JS.
 */
 function calc(initialValue = 2) {
   // accumulator
