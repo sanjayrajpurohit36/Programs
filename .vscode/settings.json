@@ -10,7 +10,15 @@
         "utility": "cpp",
         "map": "cpp",
         "vector": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "iosfwd": "cpp",
+        "string": "cpp",
+        "new": "cpp",
+        "__locale": "cpp",
+        "__string": "cpp",
+        "string_view": "cpp",
+        "algorithm": "cpp",
+        "stack": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
