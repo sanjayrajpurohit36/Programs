@@ -36,8 +36,8 @@ console.log("FUNCTION INVOCATION PATTERN\n", obj1); // 9 will returned
 /**
  *  Constructor Invocation pattern CIP
  *  @return It will always return the newly created object
- *  value of this is always newly created object (iff an explicitely no object is returned  
- *  i.e return {} should not be there.)
+ *  value of this is always newly created object (iff an explicitely no object / non primitive data type  is returned
+ *  i.e return {} / non primitive data type should not be there.)
  * */
 
 var v1 = new product("pen", 20);
