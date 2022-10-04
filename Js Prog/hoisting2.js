@@ -7,4 +7,4 @@ let y = 10;
   y = 100;
   //   x = 200; // will throw an error here re assignment of const variable.
 })();
-console.log("y outside func=>", y);
+console.log("y outside func =>", y);
