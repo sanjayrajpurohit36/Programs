@@ -1,5 +1,5 @@
 /*  What will be the output of the following code
-    Concept: Hoisting, (function, block) scope variables, var, let
+    Concept: Hoisting, (function, block) scope variables, let
 */
 
 
