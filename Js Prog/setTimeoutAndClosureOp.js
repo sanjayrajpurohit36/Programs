@@ -1,4 +1,4 @@
-// //set time out examples to be asked in interview
+// //setTimeout examples to be asked in interview
 // let x = function () {
 //   var i = 1;
 //   setTimeout(function () {
