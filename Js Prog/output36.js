@@ -12,4 +12,4 @@ let obj2 = {
 }
 
 let resultObj = Object.assign(obj1, obj2);
-console.log(obj1, obj2, resultObj);
+console.log("=>", obj1, obj2, resultObj);
