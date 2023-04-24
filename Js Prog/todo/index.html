@@ -1,0 +1,49 @@
+<!-- <!DOCTYPE html> -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Todo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script tyoe="text/javascript" src="./main.js"></script>
+    <script tyoe="text/javascript" src="./utils/generalHelper.js"></script>
+    <script tyoe="text/javascript" src="./schema.js"></script>
+    <script>
+      function checkInputs() {
+        var title = document.getElementById("title").value;
+        var desc = document.getElementById("desc").value;
+        if (title.length == 0 || desc.length == 0) {
+          return false;
+        }
+        return true;
+      }
+      function bubbling() {
+        alert("hi");
+      }
+    </script>
+  </head>
+  <body>
+    <div
+      class="todo-container"
+      style="background: red; width: 100%; height: 100%"
+    >
+      <div class="task-input-wrapper" id="task-detail-input-wrapper">
+        <label for="title">Title</label>
+        <input type="text" id="title" placeholder="Task Title" />
+        <label for="Description">Description</label>
+        <input type="text" id="desc" placeholder="Enter the description" />
+        <button onclick="addTodoTask()" disable="checkInputs()">
+          Add Task
+        </button>
+      </div>
+      <div class="task-block-wrapper" id="tbw">
+        <div id="todo" class="task-block">
+          <span onclick="handleInputBox(true)" class="add-task"> + </span>
+        </div>
+        <div id="inProgress" class="task-block"></div>
+        <div id="done" class="task-block"></div>
+      </div>
+    </div>
+  </body>
+</html>
