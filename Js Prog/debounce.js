@@ -1,6 +1,6 @@
-/* 
+/*
 defination:
-debounce function returns function when there is a DIFFERENCE of certain time lets us 
+debounce function returns function when there is a DIFFERENCE of certain time lets us
 say x sec/x ms in between two key stroke events
 */
 
@@ -18,7 +18,7 @@ const doSomeMagic = (fn, delay = 300) => {
   let timer;
   return function () {
     let context = this, // to achieve that we're maintaining the this in context & arguments in args  // also it is done to check that the environment(the lexical scope)in which this function is being called is same with the same args
-      args = arguments;
+      args = arguments; // arguments is the default keyword which has the all the fn parameters in an array
     clearTimeout(timer);
     timer = setTimeout(() => {
       fn.apply(context, args); // we will call this function using apply to fix out this variables and context
