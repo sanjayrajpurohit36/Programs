@@ -1,4 +1,4 @@
-/* 
+/*
     1. function declaration/ function statement
     2. function expression
     3. annonyus function
@@ -17,7 +17,7 @@ console.log(3);
 // test
 
 // abc(); abc will be called because abc is created in memory and hoisted but
-// x(); this function is not hoisted as till the compiler reaches the last line the x is undefined but we have accesses it before initialization
+// x(); this function is not hoisted as till the compiler reaches the last line the x is undefined but we can access it before initialization because it is treated as a variable
 // during the memory creation phase the abc() is assigned in memory and hoisted but not x as x is treated like a normal variable and assigned undefined at the initial phase.
 
 // function declaration or function statement
@@ -61,7 +61,7 @@ test(1, 2);
 
 // First class functions / Functions are first class citizens
 /* functions are able to get passed to another function as arguments, and can be returned as well
-   The ability of functions to get passed as an argument and can be used as values is known as first class functions and which also can be returned. 
+   The ability of functions to get passed as an argument and can be used as values is known as first class functions and which also can be returned.
 */
 var firstClassFunction = function (functionAsParam) {
   console.log("consoling function as param", functionAsParam);
