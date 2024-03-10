@@ -32,8 +32,10 @@ let x = function () {
   console.log("inside function x");
 };
 x();
-/* difference between function expression and function statement/ declaration is hoisting.
-/ function statement/declaration is hoisted but not function experesion. */
+/*
+  difference between function expression and function statement/ declaration is hoisting.
+  function statement/declaration is hoisted but not function experesion.
+*/
 
 // annonymus function
 //def:  these functions are functions without a name, these can be used at the place of values, for using then we must assign them to a vaiable
