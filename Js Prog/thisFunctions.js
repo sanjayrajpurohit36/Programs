@@ -3,14 +3,20 @@
 */
 
 // Function
-// function test () {
-//     console.log(this); // window / global object
+// function test() {
+//   console.log(this); // window / global object
 // }
 
 // FAT Arrow Function
 const test2 = () => {
-    console.log(this); // window / global object as the FAT arrow functions don't have their own this, so they access this from their parent scope.
-}
+  console.log(this);
+  /* 
+    Note: Check in browser scripts
+    window / global object as the FAT arrow functions don't have their own this, 
+    so they access the value of "this" object from their parent's scope, which in this case is 
+    global object / window object
+  */
+};
 
 // const  test3 = function() {
 //     console.log(this) //  window / global object
@@ -19,4 +25,3 @@ const test2 = () => {
 // test();
 test2();
 // test3();
-
