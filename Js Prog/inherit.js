@@ -1,18 +1,18 @@
 //difference between obj.create and new objname
-function Data () {
-    this.name = "Sanjay";
+function Data() {
+  this.name = "Sanjay";
 }
 Data.prototype.from = function () {
-    console.log("I am from Rajasthan");
-}
+  console.log("I am from Rajasthan");
+};
 
 Data.prototype.livein = function () {
-    console.log("I am living in Bengaluru");
-}
+  console.log("I am living in Bengaluru");
+};
 
 console.log("\nUsing new\n");
 
-var x = new Data;
+var x = new Data();
 console.log(x.name);
 x.from();
 x.livein();
