@@ -19,7 +19,8 @@ console.log(thisObj);
 
 /*
     Key Point: As the FAT arrow function don't have their own "this" that's why they
-    reference / inherit "this" from their ancestors or parent.
+    reference / inherit "this" from their ancestors or parent, or we can say that they get their this from their
+    enclosing lexical environment
 
     Also, here MIP is used Method Invocation Pattern due to which the "this" object inside the
     FAT arrow function will refer this as whatever is written before "." operator.
