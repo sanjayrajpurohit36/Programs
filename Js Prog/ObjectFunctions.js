@@ -21,7 +21,7 @@ const Person = { name: "Tony", surname: "Roy" };
 /**
  * Property: writable
  *
- * dob property will become read-only property of the obj obj
+ * dob property will become read-only property of the object Person
  * */
 Object.defineProperty(Person, "dob", {
   value: "21/11/1996",
@@ -31,4 +31,11 @@ Object.defineProperty(Person, "dob", {
 console.log(Person.dob);
 Person.dob = "22/01/2001"; //  this will not work as the dob property is not writable and as we're using the strict mode it will also throw the error
 console.log(Object.keys(Person));
+console.log(Person);
+
+// What if we want to freeze one existing property of Person object
+
+Object.defineProperty(Person, "name", { writable: false });
+Person.name = "Sanjay";
+
 console.log(Person);
