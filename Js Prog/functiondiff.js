@@ -22,12 +22,11 @@ const testObject = {
 };
 
 const testFuncCall = testObject.testFunc;
-console.log(testFuncCall()); 
+console.log(testFuncCall());
 /* 
-  it will return an empty object as FAT arrow functions don't have their own this as this will 
+  it will return the global window object as FAT arrow functions don't have their own this as this will 
   refer to the parent for their "this"
 */
-
 
 /*  Key points:-
 1. Arrow function are not hoisted
