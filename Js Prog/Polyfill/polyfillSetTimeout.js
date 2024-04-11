@@ -2,6 +2,16 @@
     Write polyfill for setTimeout
 */
 
+// Add these two lines for dynamically adding the heading of the html doc
+const body = document.getElementsByTagName("body");
+const headingElement = document.createElement("h2");
+body[0].appendChild(headingElement);
+headingElement.appendChild(
+    document.createTextNode("Testing Polyfill for SetTimeout")
+);
+
+// Polyfill starts from there
+
 function SetTimeoutPolyfill() {
     let timeOutMap = {};
     let id = 0;
