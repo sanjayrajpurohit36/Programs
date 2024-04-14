@@ -9,21 +9,24 @@
 */
 
 const memoizedFactorial = (function () {
-    let fact = [0,1]
+    let fact = [0, 1];
     return function factorial(n) {
         // console.log(fact);  by uncommenting this line you can check the values of fact array getting set after every new input value
-        if (n > 0) {
+        if (n > 1) {
             let ans = fact[n];
-            if (typeof (ans) !== "number") {
+            if (typeof ans !== "number") {
+                console.log("going for recursion");
                 ans = n * factorial(n - 1);
             }
             fact[n] = ans;
             return ans;
-        } return 0;
-    }
+        }
+        return 1;
+    };
 })();
 
-console.log(memoizedFactorial(15))
-console.log(memoizedFactorial(4))
-console.log(memoizedFactorial(4))
-console.log(memoizedFactorial(6))
+console.log(memoizedFactorial(15));
+console.log(memoizedFactorial(4));
+console.log(memoizedFactorial(4));
+console.log(memoizedFactorial(6));
+console.log(memoizedFactorial(10));
